@@ -4,7 +4,7 @@ import math
 
 count = 0
 r = float(input('Enter rad'))
-x0, y0 = float(input('Enter сenter of circle(x,y)')), float(input())
+x0, y0 = random.uniform(-100, 100), random.uniform(-100, 100))
 mas_x, mas_y = [], []
 start_time = time.time()
 for i in range(100000):
