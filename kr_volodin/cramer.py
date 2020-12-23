@@ -25,6 +25,6 @@ else:
     result = f.cramer(coeffs, free_coeffs, number, d)
     print(f'Ответ:{result}')
     with open('time.txt', 'a') as file:
-        file.write(str(time.time() - start_time + '\n'))
+        file.write(str(time.time() - start_time) + '\n')
     with open('memory.txt', 'a') as file:
-        file.write(str(getsizeof(result) + '\n'))
+        file.write(str(getsizeof(result)) + '\n')

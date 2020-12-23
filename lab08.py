@@ -1,20 +1,17 @@
 import random
 import time
-import math
+import def_lab08 as count
 
-count = 0
-r = float(input('Enter rad'))
-x0, y0 = random.uniform(-100, 100), random.uniform(-100, 100))
 mas_x, mas_y = [], []
-start_time = time.time()
-for i in range(100000):
-    mas_x.append(random.randint(-100, 100))
-    mas_y.append(random.randint(-100, 100))
-    if math.pow(r, 2) >= math.pow(mas_x[i] - x0, 2) + math.pow(mas_y[i] - y0, 2):
-        count += 1
-if count == 0:
-    print('В данной области нет точек')
-else:
-    print(f'Радиус:{r}  Центр:{x0};{y0}  Кол-во точек:{count}')
-with open('time.txt', 'a') as f:
-    f.write(str(time.time() - start_time) + '\n')
+r = float(input('Введите радиус окружности'))
+n = 100000
+while n <= 1000000:
+    start_time = time.time()
+    for i in range(n):
+        mas_x.append(random.uniform(-100, 100))
+        mas_y.append(random.uniform(-100, 100))
+    x0, y0 = random.uniform(-100, 100), random.uniform(-100, 100)
+    print(f'Центр:{x0};{y0}  Радиус:{r}  Кол-во точек:{count.counter(mas_x, mas_y, x0, y0, r)}')
+    with open('time.txt', 'a') as f:
+        f.write(str(time.time() - start_time) + '\n')
+    n += 100000
