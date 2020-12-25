@@ -9,8 +9,8 @@ s = 0
 c = []
 n = int(input('Число строк в матрице'))
 m = int(input('Число столбцов в матрице'))
-a = [[random.randint(1, 10) for j in range(m)] for i in range(n)]
-b = [[random.randint(1, 10) for j in range(m)] for i in range(n)]
+a = [[random.uniform(1, 10) for j in range(m)] for i in range(n)]
+b = [[random.uniform(1, 10) for j in range(m)] for i in range(n)]
 
 start_time = time.time()
 for j in range(0,m):
