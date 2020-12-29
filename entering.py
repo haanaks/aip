@@ -1,5 +1,0 @@
-x = input('Enter lowest x')
-x2 = input('Enter highest x')
-h = input('Enter step')
-a = input('Enter a')
-s = (input('Also please select a function'))
